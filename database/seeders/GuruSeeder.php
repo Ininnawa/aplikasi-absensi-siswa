@@ -21,7 +21,7 @@ class GuruSeeder extends Seeder
 
         Guru::create([
             'nip' => '151020304050607081',
-            'nama' => 'Siti Rahayu',
+            'nama' => 'Andi Wardaniati',
             'jk' => 'P',
         ]);
 
