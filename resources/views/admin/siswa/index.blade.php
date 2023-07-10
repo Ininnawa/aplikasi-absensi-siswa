@@ -31,6 +31,7 @@
                             </div>
                         @endif
                         <div class="card-header-action mx-3">
+                        <a href="{{ route('siswa.export') }}" class="btn btn-info">Export Siswa</a>
                             <button type="button" class="btn btn-success" data-toggle="modal"
                                 data-target="#importModal">Import Siswa</button>
                         </div>

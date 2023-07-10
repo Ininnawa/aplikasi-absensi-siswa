@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 use App\Models\Kelas;
 use App\Models\Siswa;
 use App\Imports\SiswaImport;
+use App\Exports\SiswaExport;
 use Illuminate\Http\Request;
 use Maatwebsite\Excel\Facades\Excel;
 use Illuminate\Support\Facades\Validator;
@@ -143,4 +144,9 @@ class SiswaController extends Controller
 
         return redirect()->back()->with('success', 'Data siswa berhasil diimpor.');
     }
+
+    public function export()
+{
+    return Excel::download(new SiswaExport, 'data_siswa.xlsx');
+}
 }
